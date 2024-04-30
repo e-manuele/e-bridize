@@ -9,16 +9,6 @@
 	<link rel="stylesheet" href="dist/css/style.css">
 	<script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
 	<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
-	<style type="text/css">
-		div.stlviewer {
-			height: 500px;
-		}
-	</style>
-	<script type=text/javascript>
-		window.onload = function () {
-			STLViewerEnable("stlviewer");
-		}
-	</script>
 	<script src="dist/js/stl_viewer/stl_viewer.min.js"></script>
 </head>
 <body class="is-boxed has-animations">
@@ -50,16 +40,17 @@
 							class="button" href="#">Get in touch</a></div>
 					</div>
 					<div class="hero-figure anime-element">
-						<div class=stlviewer data-src=hook.stl></div>
-						<script>
-							var stl_viewer2 = new StlViewer(document.getElementById("stl_cont"), {
-								models: [{
-									id: 0,
-									filename: "dist/stl/hook.stl"
-								}]
-							});
-						</script>
+						<div class=stlviewer ></div>
+
 					</div>
+					<script>
+						var stl_viewer = new StlViewer(document.getElementById("stlviewer"), {
+							models: [{
+								id: 0,
+								filename: "dist/stl/hook.stl"
+							}]
+						});
+					</script>
 				</div>
 			</div>
 		</section>
@@ -216,7 +207,7 @@
 						</a>
 					</li>
 				</ul>
-				<div class="footer-copyright">&copy; 2019 Solid, all rights reserved</div>
+				<div class="footer-copyright">&copy; 2024 E-bridize, all rights reserved</div>
 			</div>
 		</div>
 	</footer>
